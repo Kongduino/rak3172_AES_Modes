@@ -10,7 +10,7 @@ I managed to port the STM32Cube code  to Arduino / STM32duino. It wasn't easy, a
 
 ### B0
 
-For instance the `cores/arduino/binary.h` file defines binary numbers prefixed with a B, which is slightly retarded since the `0b` prefix works quite well thankyou. This conflicts with `Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_cryp.h` and `Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cryp.c`, where the `CRYP_ConfigTypeDef` struct has a B0 too. Oops.
+For instance the `cores/arduino/binary.h` file defines binary numbers prefixed with a B, which is slightly retarded since the `0b` prefix works quite well thankyou. This conflicts with `Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal_cryp.h` and `Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cryp.c`, where the `CRYP_ConfigTypeDef` struct has a `B0` too. Oops.
 
 ![Binary_B0](assets/Binary_B0.png)
 
